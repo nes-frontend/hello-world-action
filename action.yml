@@ -4,7 +4,7 @@ inputs:
   your-name:  # id of input
     description: 'greet target'
     required: true
-    default: 'fuga'
+    default: 'World'
 outputs:
   random-number:
     description: "Random number"
