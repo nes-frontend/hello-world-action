@@ -1,0 +1,16 @@
+name: 'Hello World'
+description: 'Greet someone'
+inputs:
+  your-name:  # id of input
+    description: 'greet target'
+    required: true
+    default: 'fuga'
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-number }}
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ inputs.your-name }}.
+      shell: bash
